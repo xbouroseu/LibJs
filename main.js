@@ -2,7 +2,7 @@
  * Javascript Library Development and Testing.
  * Exercising purpose.
  * 2009 - 2010.
- * Developer Lo0kBeHiNdU http://boul-php.no-ip.org.
+ * Developer Christos Boulmpasakos
  * Freelance Web Developer and Designer.
  * Library CodeName : Lib.
  * Rewritten and Moduled.
