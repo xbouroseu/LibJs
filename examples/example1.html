@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            .pholder {
+                border-style: solid
+            }
+        </style>
+        <script type="text/javascript" src="src/lib.js"></script>
+        <script type="text/javascript">
+            my_array = [1, 2, 3];
+
+            Query(document).ready(function(e) {
+
+                var animation1 = {
+                    "color": "red", 
+                    "width": "1250x", 
+                    "height": "200px", 
+                    "backgroundColor": "yellow",
+                    "fontSize": "40pt",
+                    "borderWidth": "5px",
+                    "borderColor": "green",
+                }; 
+
+                var animation2 = {
+                    "color": "yellow", 
+                    "width": "400px", 
+                    "height": "100px", 
+                    "backgroundColor": "purple",
+                    "fontSize": "15pt"
+                }
+                
+                Query("#butAnim1").click(function(e) {
+                    Query("#pholder1").animate(animation1, "xx-slow", "linear");
+                });
+
+                Query("#butAnim2").click(function(e) {
+                    Query("#pholder1").animate(animation2, "xx-slow", "linear");
+                });
+
+                Query("#iterArr").click(function(e) {
+                    Lib.utils.array.each(my_array, function(el) {
+                        window.alert(el);
+                    });
+                });
+                
+                Query("#appendBut").click(function(e) {
+                    Query("#elem1").append(Query("#pholder1").clone());
+                });
+                
+                //  GET all listed universities in a specified country and do something once request is done
+                var req = Lib.utils.ajax.request({
+                    type: "GET",
+                    url: "http://universities.hipolabs.com/search",
+                    params: {
+                        "country": "United States"
+                    },
+                    complete: function(xhr) {
+                        // do something if the request is completed
+                    },
+                    error: function(xhr) {
+                        // do something if the request fails
+                    }
+                });
+                console.log(req);
+               
+            });
+
+        </script>
+    </head>
+    <body>
+        <button id="iterArr">Iterate array</button>
+        <div>my_array = [1, 2, 3]</div></br>
+
+        <button id="butAnim1">Animation 1</button><button id="butAnim2">Animation 2</button>
+        <div id="pholder1" class="pholder">Animated Div</div></br>
+
+        <button id="appendBut">Append Animated Div</button>
+        <div id="elem1">Elem1</div>
+    </body>
+</html>
