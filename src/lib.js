@@ -1,12 +1,11 @@
 /*
+ * Copyright 2009
  * Javascript Library Development and Testing.
  * Exercising purpose.
- * 2009 - 2010.
  * Developer Christos Boulmpasakos
  * Freelance Web Developer and Designer.
  * Library CodeName : Lib.
  * Rewritten and Moduled.
- * Several new utilities and more coming soon..
 */
 
 (function() {
@@ -36,7 +35,7 @@ var toString = Object.prototype.toString,
 	*/
 	
 	__proto: {
-		Array: false,
+		Array: true,
 		Function: false,
 		String: false,
 		Number: false,
