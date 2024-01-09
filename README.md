@@ -36,9 +36,9 @@ Query("#elem1").append("<div>Div1</div>").append("<div>Div2</div>").children().e
 ```
 
 ### Event-handling
-```javascript
+Append child div to element with id `elem1` when button with `button1` id is clicked.
 
-// Append child div to element with id 'elem1' when button with 'button1' id is clicked.
+```javascript
 Query("button#button1").click(function(ev) {
     Query("#elem1").append("<div>div2</div>");
 });
