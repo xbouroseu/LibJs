@@ -6,7 +6,7 @@
                 border-style: solid
             }
         </style>
-        <script type="text/javascript" src="src/lib.js"></script>
+        <script type="text/javascript" src="../src/lib.js"></script>
         <script type="text/javascript">
             my_array = [1, 2, 3];
 
@@ -27,7 +27,8 @@
                     "width": "400px", 
                     "height": "100px", 
                     "backgroundColor": "purple",
-                    "fontSize": "15pt"
+                    "fontSize": "15pt",
+                    "borderColor": "black"
                 }
                 
                 Query("#butAnim1").click(function(e) {
@@ -45,24 +46,9 @@
                 });
                 
                 Query("#appendBut").click(function(e) {
-                    Query("#elem1").append(Query("#pholder1").clone());
+                    Query("#elem1").append(Query("#pholder1").clone().attr("id",""));
                 });
-                
-                //  GET all listed universities in a specified country and do something once request is done
-                var req = Lib.utils.ajax.request({
-                    type: "GET",
-                    url: "http://universities.hipolabs.com/search",
-                    params: {
-                        "country": "United States"
-                    },
-                    complete: function(xhr) {
-                        // do something if the request is completed
-                    },
-                    error: function(xhr) {
-                        // do something if the request fails
-                    }
-                });
-                console.log(req);
+
                
             });
 
