@@ -1,5 +1,7 @@
-# LibJs - jQuery-inspired Javascript Library
-## Key Features:
+# LibJs
+## A jQuery-inspired Javascript Library
+
+### Key Features:
 1. Javascript Core API extension
 2. HTML document traversal and manipulation
 3. Event-handling
