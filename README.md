@@ -12,7 +12,7 @@
 
 ### Javascript Core API extension
 
-The library provides additional functionality for the Javascript core `Array`, `String`, `Number`, `Function`, `Element` classes. You can choose either to extend those classes with these methods via modifying the source and setting the `Lib.__proto` switches to `true` or keep the functionality seperate.
+The library provides additional functionality for the Javascript core `Array`, `String`, `Number`, `Function`, `Element` classes. You can choose to either extend those classes with these methods via modifying the source and setting the `Lib.__proto` switches to `true`, or keep the functionality seperate.
 ```javascript
 var array1 = [1, 5, 8, 11];
 
